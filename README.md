@@ -17,7 +17,7 @@ git submodule add -m master https://github.com/google/googletest.git
 ```cmake
 # 注意：在使用 VC++ 时，系统默认链接 `/MDd`，而 `gtest` 默认链接的是 `/MTd`，为了能正常编译，强制 `gtest` 链接 `MDd`。
 if (MSVC)
-    set(gtest_force_shared_crt ON CACHE BOOL "Build As shared lirary" FORCE)
+    set(gtest_force_shared_crt ON CACHE BOOL "Build As shared library" FORCE)
 endif()
 add_subdirectory(googletest)
 ```
